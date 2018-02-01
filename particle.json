@@ -31,13 +31,13 @@
     },
     "line_linked":{
       "enable":true,
-      "distance":70,
+      "distance":50,
       "color":"#fff",
       "width":1
     },
     "move":{
       "enable":true,
-      "speed":2,
+      "speed":1,
       "direction":"none",
       "straight":false
     }

@@ -1,12 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Jura');
+
 html, body{
   margin: 0;
   padding: 0;
-  background-color:#DDD;
+  background-color:#ededed;
+  font-family: 'Jura', sans-serif;
 }
+
+
 #particles-js{
   background: #000;
   margin: 10px;
   height:100vh;
+
+}
+.neon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0px;
+  padding: 0 20px;
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 20px #00ffdd;
+
+}
+.neon:after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #00ffdd;
+  filter: blur(5px);
+}
+
+.neon:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3af4fe;
+  z-index: -2;
+  opacity: .2;
+  filter: blur(15px);
 
 }
 
@@ -16,13 +56,12 @@ html, body{
   width: 200px;
   height: 50px;
   position: absolute;
-  top: 50%;
-  left: 45%;
+  top:50%;
+  left: 43%;
 
 }
 
 .flip3D{
-  width: 400px;
   height: 300px;
   margin: 10px;
   float: left;
@@ -33,12 +72,13 @@ html, body{
 }
 .flip3D > .front{
   position: absolute;
-  -webkit-transform: perspective(600px) rotateY(0deg);
+  -webkit-transform: perspective(600px) rotateX(0deg);
   background: #fff;
   width: 400px;
   height: 300px;
-  border: 1px solid #000;
+  border: 1px solid #4c00ff;
   border-radius: 7px;
+
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform .5s linear 0s;
 }
@@ -48,14 +88,18 @@ html, body{
   background: #80BFFF;
   width: 400px;
   height: 300px;
-  border: 1px solid #000;
+  border: 1px solid #4c00ff;
   border-radius: 7px;
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform .5s linear 0s;
 }
 .flip3D:hover > .front{
-  -webkit-transform: perspective(600px) rotateY(180deg);
+  -webkit-transform: perspective(600px) rotateX(180deg);
 }
 .flip3D > .back{
   -webkit-transform: perspective(600px) rotateY(0deg);
+}
+
+.panel{
+  padding: 10px;
 }
